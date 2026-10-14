@@ -12,37 +12,26 @@
 
     <style type="text/tailwindcss">
         @theme {
-            --font-exo: "Exo 2", sans-serif;
+        --font-exo: "Exo 2", sans-serif;
         }
     </style>
 
-    <style>
-        html {
-            scroll-behavior: smooth;
-        }
-
-        body {
-            font-family: "Exo 2", sans-serif;
-        }
-
-        .fondo-portafolio {
-            background: linear-gradient(110deg, #6415dc 0%, #4148ed 52%, #2479f5 100%);
-        }
+    <style> html {scroll-behavior: smooth;} body {font-family: "Exo 2", sans-serif;} .fondo-portafolio { background: linear-gradient(110deg, #6415dc 0%, #4148ed 52%, #2479f5 100%);}
+        .tarjeta-proyecto {transition: transform 0.3s ease, box-shadow 0.3s ease;}.tarjeta-proyecto:hover {transform: translateY(-5px);box-shadow: 0 12px 28px rgba(76, 201, 240, 0.25);}
     </style>
 </head>
 
 <body class="min-h-screen flex flex-col bg-[#303030] text-white font-exo">
-
     <div class="bg-[#303030] shadow-md shadow-black/20">
         <header class="max-w-[1400px] mx-auto px-6 py-4 flex flex-col sm:flex-row justify-between items-center gap-4">
             <a href="#inicio" class="text-xl sm:text-2xl font-semibold text-white no-underline">Mi Portafolio</a>
 
             <nav aria-label="Menú principal">
                 <ul class="flex flex-wrap justify-center items-center gap-1 sm:gap-2 text-sm sm:text-base font-medium">
-                    <li> <a href="#inicio" class="inline-block rounded-md bg-blue-600 px-3 py-2 text-white"> Introduccion</a></li>
-                    <li> <a href="#" data-boton class="inline-block rounded-md px-3 py-2 text-white transition-colors hover:bg-white/10"> Proyectos</a></li>
-                    <li> <a href="#" data-boton class="inline-block rounded-md px-3 py-2 text-white transition-colors hover:bg-white/10"> Noticias</a></li>
-                    <li> <a href="#" data-boton class="inline-block rounded-md px-3 py-2 text-white transition-colors hover:bg-white/10"> Contacto</a></li>
+                    <li><a href="#inicio" class="inline-block rounded-md bg-blue-600 px-3 py-2 text-white"> Introducción</a></li>
+                    <li><a href="#proyectos" class="inline-block rounded-md px-3 py-2 text-white transition-colors hover:bg-white/10">Proyectos</a></li>
+                    <li><a href="#" data-boton class="inline-block rounded-md px-3 py-2 text-white transition-colors hover:bg-white/10">Noticias</a></li>
+                    <li><a href="#" data-boton class="inline-block rounded-md px-3 py-2 text-white transition-colors hover:bg-white/10">Contacto</a></li>
                 </ul>
             </nav>
         </header>
@@ -54,9 +43,9 @@
                 <img src="src/kibi.jpg" alt="Kibi" class="w-full h-full object-cover">
             </div>
 
-            <h1 class="mt-5 text-4xl sm:text-5xl font-bold"> Nicolás </h1>
+            <h1 class="mt-5 text-4xl sm:text-5xl font-bold">Nicolás</h1>
 
-            <p class="mt-3 text-lg sm:text-2xl font-normal">Estudiante de informatica Duoc UC </p>
+            <p class="mt-3 text-lg sm:text-2xl font-normal">Estudiante de informática Duoc UC</p>
 
             <a
                 href="https://github.com/kibo64"
@@ -68,6 +57,57 @@
             </a>
         </section>
     </main>
+
+    <section id="proyectos" class="bg-[#240046] px-5 py-16 sm:py-20">
+        <div class="max-w-[1200px] mx-auto">
+
+            <div class="text-center mb-10">
+                <p class="text-sm uppercase tracking-[0.25em] text-[#4CC9F0] font-bold"> Mi trabajo</p>
+                <h2 class="text-3xl sm:text-4xl font-bold mt-2 text-white"> Mis proyectos
+                </h2><p class="text-white/70 mt-3 max-w-2xl mx-auto">Este es uno de los proyectos que he desarrollado durante mi aprendizaje.</p>
+            </div>
+            <div class="flex justify-center">
+                <article class="tarjeta-proyecto w-full max-w-md bg-[#3C096C] rounded-xl overflow-hidden border border-[#4CC9F0]/30 shadow-md shadow-[#4CC9F0]/20 flex flex-col">
+                    <div class="h-48 bg-[#160a2d] flex items-center justify-center overflow-hidden">
+                        <img
+                            src="https://placehold.co/900x500/240046/F72585?text=LEVEL-UP+GAMER"
+                            alt="Vista previa de LEVEL-UP GAMER"
+                            class="w-full h-full object-cover"
+                        >
+                    </div>
+
+                    <div class="p-5 flex flex-col flex-grow">
+                        <span class="text-xs text-[#F72585] font-bold mb-2">
+                            HTML · Tailwind CSS · JavaScript
+                        </span>
+
+                        <h3 class="text-xl font-bold text-white mb-3">
+                            LEVEL-UP GAMER
+                        </h3>
+
+                        <p class="text-sm text-white/80 mb-5 flex-grow">
+                            Tienda gamer con catálogo de productos,
+                            perfil de usuario y carrito de compras.
+                        </p>
+
+                        <a
+                            href="https://kibo64.github.io/LEVEL-UP-GAMER/"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            class="block text-center bg-[#F72585]/90 text-white rounded-lg px-4 py-3 font-bold hover:bg-[#F72585] transition-colors"
+                        >
+                            Ver proyecto
+                        </a>
+                    </div>
+                </article>
+
+            </div>
+        </div>
+    </section>
+
+    <footer class="bg-[#160a2d] px-5 py-6 text-center text-sm text-white/70 border-t border-[#F72585]/30">
+        <p>&copy; 2026 Nicolás. Portafolio personal.</p>
+    </footer>
 
     <script>
         document.querySelectorAll("[data-boton]").forEach(function (boton) {
